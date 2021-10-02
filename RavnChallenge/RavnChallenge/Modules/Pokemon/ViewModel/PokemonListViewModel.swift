@@ -13,13 +13,19 @@ typealias PokemonGeneration = (name: String, pokemons: [Pokemon])
 class PokemonListViewModel: ObservableObject {
     
     // MARK: - Variables Declaration
-    @Published var generations: [PokemonGeneration] = .init()
     @Published var isLoading = false
     @Published var showAlert = false
     @Published var errorMessage = ""
+    @Published var searchText = ""
     
     private let service: PokemonServiceType
-    internal var cancellables = Set<AnyCancellable>()
+    private var cancellables = Set<AnyCancellable>()
+    private var generations: [PokemonGeneration] = .init()
+    private var generationsFiltered: [PokemonGeneration] = .init()
+    
+    var generationsSource: [PokemonGeneration] {
+        searchPokemons()
+    }
     
     // MARK: - Initilizers
     init(service: PokemonServiceType = PokemonService()) {
@@ -51,5 +57,32 @@ class PokemonListViewModel: ObservableObject {
                 }
             }
             .store(in: &cancellables)
+    }
+    
+    // MARK: - Private Methods
+    private func searchPokemons() -> [PokemonGeneration] {
+        guard !searchText.isEmpty else { return generations }
+        
+        generationsFiltered.removeAll()
+        generations.forEach { generation in
+            var pokemons = [Pokemon]()
+            
+            generation.pokemons.forEach { pokemon in
+                if let name = pokemon.name, name.lowercased().contains(searchText.lowercased()) {
+                    pokemons.append(pokemon)
+                }
+            }
+            
+            if !pokemons.isEmpty {
+                generationsFiltered.append(
+                    PokemonGeneration(
+                        name: generation.name,
+                        pokemons: pokemons
+                    )
+                )
+            }
+        }
+        
+        return generationsFiltered
     }
 }

@@ -25,7 +25,7 @@ struct PokemonListView: View {
                 SpinnerView()
             } else {
                 List {
-                    ForEach(viewModel.generations, id: \.name) { generation in
+                    ForEach(viewModel.generationsSource, id: \.name) { generation in
                         Section(content: {
                             ForEach(generation.pokemons, id: \.name) { pokemon in
                                 let cellViewModel = PokemonCellViewModel(pokemon: pokemon)
@@ -49,7 +49,11 @@ struct PokemonListView: View {
                 message: Text(viewModel.errorMessage)
             )
         }
-        .listStyle(PlainListStyle())
+        .searchable(
+            text: $viewModel.searchText,
+            placement: .navigationBarDrawer(displayMode: .always)
+        )
+        .listStyle(.plain)
         .navigationBarTitle(barTitle)
     }
 }
