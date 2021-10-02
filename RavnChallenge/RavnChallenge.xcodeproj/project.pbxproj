@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		9776F7312707FF9C00DE194E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9776F7302707FF9C00DE194E /* ContentView.swift */; };
 		9776F7332707FF9D00DE194E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9776F7322707FF9D00DE194E /* Assets.xcassets */; };
 		9776F7362707FF9D00DE194E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9776F7352707FF9D00DE194E /* Preview Assets.xcassets */; };
+		97AECAFB270802EB0078A009 /* Network in Resources */ = {isa = PBXBuildFile; fileRef = 97AECAF8270802EB0078A009 /* Network */; };
+		97AECAFC270802EB0078A009 /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 97AECAF9270802EB0078A009 /* Utilities */; };
+		97AECAFD270802EB0078A009 /* Modules in Resources */ = {isa = PBXBuildFile; fileRef = 97AECAFA270802EB0078A009 /* Modules */; };
+		97AECB012708047C0078A009 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 97AECB002708047C0078A009 /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,9 @@
 		9776F7322707FF9D00DE194E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9776F7352707FF9D00DE194E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9776F7372707FF9D00DE194E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97AECAF8270802EB0078A009 /* Network */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Network; sourceTree = "<group>"; };
+		97AECAF9270802EB0078A009 /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utilities; sourceTree = "<group>"; };
+		97AECAFA270802EB0078A009 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Modules; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97AECB012708047C0078A009 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,11 +60,13 @@
 		9776F72D2707FF9C00DE194E /* RavnChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				97AECAFA270802EB0078A009 /* Modules */,
+				97AECAF8270802EB0078A009 /* Network */,
+				9776F7342707FF9D00DE194E /* Preview Content */,
+				97AECAFE270802F70078A009 /* Resources */,
+				97AECAF9270802EB0078A009 /* Utilities */,
 				9776F72E2707FF9C00DE194E /* RavnChallengeApp.swift */,
 				9776F7302707FF9C00DE194E /* ContentView.swift */,
-				9776F7322707FF9D00DE194E /* Assets.xcassets */,
-				9776F7372707FF9D00DE194E /* Info.plist */,
-				9776F7342707FF9D00DE194E /* Preview Content */,
 			);
 			path = RavnChallenge;
 			sourceTree = "<group>";
@@ -67,6 +77,15 @@
 				9776F7352707FF9D00DE194E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		97AECAFE270802F70078A009 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9776F7372707FF9D00DE194E /* Info.plist */,
+				9776F7322707FF9D00DE194E /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +104,9 @@
 			dependencies = (
 			);
 			name = RavnChallenge;
+			packageProductDependencies = (
+				97AECB002708047C0078A009 /* Apollo */,
+			);
 			productName = RavnChallenge;
 			productReference = 9776F72B2707FF9C00DE194E /* RavnChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 9776F7222707FF9C00DE194E;
+			packageReferences = (
+				97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 9776F72C2707FF9C00DE194E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +151,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97AECAFD270802EB0078A009 /* Modules in Resources */,
+				97AECAFB270802EB0078A009 /* Network in Resources */,
+				97AECAFC270802EB0078A009 /* Utilities in Resources */,
 				9776F7362707FF9D00DE194E /* Preview Assets.xcassets in Resources */,
 				9776F7332707FF9D00DE194E /* Assets.xcassets in Resources */,
 			);
@@ -271,7 +299,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RavnChallenge/Preview Content\"";
 				DEVELOPMENT_TEAM = 3DHF399XH3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = RavnChallenge/Info.plist;
+				INFOPLIST_FILE = RavnChallenge/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,7 +321,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RavnChallenge/Preview Content\"";
 				DEVELOPMENT_TEAM = 3DHF399XH3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = RavnChallenge/Info.plist;
+				INFOPLIST_FILE = RavnChallenge/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -328,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		97AECB002708047C0078A009 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9776F7232707FF9C00DE194E /* Project object */;
 }
