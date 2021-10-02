@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  RavnChallenge
+
+  Created by Samuel Henriquez on 2/10/21.
+  
+*/
+
+// Common
+"alert.error.title" = "There was an Error";
+"alert.error.button.accept" = "OK";
+
+// Pokemons List
+"pokemonList.bar.title" = "Pokemon List";

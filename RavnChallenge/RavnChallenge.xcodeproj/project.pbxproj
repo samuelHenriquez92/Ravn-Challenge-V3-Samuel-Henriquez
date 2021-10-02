@@ -7,26 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97494E2E27082F3700278D20 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97494E2D27082F3700278D20 /* API.swift */; };
+		97494E3427089A2400278D20 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 97494E3327089A2400278D20 /* schema.json */; };
+		97586B722708CB5A00BED658 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 97586B712708CB5A00BED658 /* Kingfisher */; };
+		97586B742708D82800BED658 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586B732708D82800BED658 /* Int+Extensions.swift */; };
+		97586B762708D95100BED658 /* PokemonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586B752708D95100BED658 /* PokemonCellViewModel.swift */; };
+		97586B7F270910F900BED658 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 97586B7E270910F900BED658 /* Apollo */; };
+		97586B81270910F900BED658 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 97586B80270910F900BED658 /* ApolloSQLite */; };
+		97586B83270915C700BED658 /* NetworkInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586B82270915C700BED658 /* NetworkInterceptorProvider.swift */; };
+		9770806E2708B06A00351AC1 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9770806D2708B06A00351AC1 /* SpinnerView.swift */; };
+		977080742708B31A00351AC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 977080762708B31A00351AC1 /* Localizable.strings */; };
+		977080792708B4FD00351AC1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977080782708B4FD00351AC1 /* String+Extensions.swift */; };
+		9770807D2708C04700351AC1 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9770807C2708C04700351AC1 /* Array+Extensions.swift */; };
+		9770807F2708C33D00351AC1 /* PokemonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9770807E2708C33D00351AC1 /* PokemonCellView.swift */; };
 		9776F72F2707FF9C00DE194E /* RavnChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9776F72E2707FF9C00DE194E /* RavnChallengeApp.swift */; };
-		9776F7312707FF9C00DE194E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9776F7302707FF9C00DE194E /* ContentView.swift */; };
 		9776F7332707FF9D00DE194E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9776F7322707FF9D00DE194E /* Assets.xcassets */; };
 		9776F7362707FF9D00DE194E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9776F7352707FF9D00DE194E /* Preview Assets.xcassets */; };
-		97AECAFB270802EB0078A009 /* Network in Resources */ = {isa = PBXBuildFile; fileRef = 97AECAF8270802EB0078A009 /* Network */; };
-		97AECAFC270802EB0078A009 /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 97AECAF9270802EB0078A009 /* Utilities */; };
-		97AECAFD270802EB0078A009 /* Modules in Resources */ = {isa = PBXBuildFile; fileRef = 97AECAFA270802EB0078A009 /* Modules */; };
-		97AECB012708047C0078A009 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 97AECB002708047C0078A009 /* Apollo */; };
+		977916DA270822EA00B28FE6 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 977916D6270822EA00B28FE6 /* Queries.graphql */; };
+		977916DC270822EA00B28FE6 /* ApolloService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977916D8270822EA00B28FE6 /* ApolloService.swift */; };
+		977916DF2708230000B28FE6 /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977916DE2708230000B28FE6 /* PokemonListView.swift */; };
+		977916E12708233200B28FE6 /* PokemonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977916E02708233200B28FE6 /* PokemonListViewModel.swift */; };
+		977916E32708235000B28FE6 /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977916E22708235000B28FE6 /* PokemonService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		97494E2D27082F3700278D20 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		97494E3327089A2400278D20 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		97586B732708D82800BED658 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		97586B752708D95100BED658 /* PokemonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCellViewModel.swift; sourceTree = "<group>"; };
+		97586B82270915C700BED658 /* NetworkInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptorProvider.swift; sourceTree = "<group>"; };
+		9770806D2708B06A00351AC1 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		977080752708B31A00351AC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		977080782708B4FD00351AC1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		9770807C2708C04700351AC1 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		9770807E2708C33D00351AC1 /* PokemonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCellView.swift; sourceTree = "<group>"; };
 		9776F72B2707FF9C00DE194E /* RavnChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RavnChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9776F72E2707FF9C00DE194E /* RavnChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RavnChallengeApp.swift; sourceTree = "<group>"; };
-		9776F7302707FF9C00DE194E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9776F7322707FF9D00DE194E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9776F7352707FF9D00DE194E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9776F7372707FF9D00DE194E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97AECAF8270802EB0078A009 /* Network */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Network; sourceTree = "<group>"; };
-		97AECAF9270802EB0078A009 /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utilities; sourceTree = "<group>"; };
-		97AECAFA270802EB0078A009 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Modules; sourceTree = "<group>"; };
+		977916D6270822EA00B28FE6 /* Queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		977916D8270822EA00B28FE6 /* ApolloService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApolloService.swift; sourceTree = "<group>"; };
+		977916DE2708230000B28FE6 /* PokemonListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
+		977916E02708233200B28FE6 /* PokemonListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonListViewModel.swift; sourceTree = "<group>"; };
+		977916E22708235000B28FE6 /* PokemonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,13 +58,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97AECB012708047C0078A009 /* Apollo in Frameworks */,
+				97586B722708CB5A00BED658 /* Kingfisher in Frameworks */,
+				97586B7F270910F900BED658 /* Apollo in Frameworks */,
+				97586B81270910F900BED658 /* ApolloSQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97586B772709054000BED658 /* PokemonList */ = {
+			isa = PBXGroup;
+			children = (
+				977916D32708228800B28FE6 /* Model */,
+				977916D22708228000B28FE6 /* View */,
+				977916D12708226E00B28FE6 /* ViewModel */,
+			);
+			path = PokemonList;
+			sourceTree = "<group>";
+		};
+		9770806C2708B04F00351AC1 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				9770806D2708B06A00351AC1 /* SpinnerView.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		977080772708B4E800351AC1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9770807C2708C04700351AC1 /* Array+Extensions.swift */,
+				97586B732708D82800BED658 /* Int+Extensions.swift */,
+				977080782708B4FD00351AC1 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9776F7222707FF9C00DE194E = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +114,12 @@
 		9776F72D2707FF9C00DE194E /* RavnChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				97AECAFA270802EB0078A009 /* Modules */,
-				97AECAF8270802EB0078A009 /* Network */,
+				9776F72E2707FF9C00DE194E /* RavnChallengeApp.swift */,
+				977916CE2708223F00B28FE6 /* Modules */,
+				977916CF2708224E00B28FE6 /* Network */,
 				9776F7342707FF9D00DE194E /* Preview Content */,
 				97AECAFE270802F70078A009 /* Resources */,
-				97AECAF9270802EB0078A009 /* Utilities */,
-				9776F72E2707FF9C00DE194E /* RavnChallengeApp.swift */,
-				9776F7302707FF9C00DE194E /* ContentView.swift */,
+				977916CD2708222800B28FE6 /* Utilities */,
 			);
 			path = RavnChallenge;
 			sourceTree = "<group>";
@@ -79,11 +132,91 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		977916CD2708222800B28FE6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				977080772708B4E800351AC1 /* Extensions */,
+				9770806C2708B04F00351AC1 /* UI Components */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		977916CE2708223F00B28FE6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				977916D02708226300B28FE6 /* Pokemon */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		977916CF2708224E00B28FE6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				977916D5270822C600B28FE6 /* GraphQL */,
+				977916D4270822BB00B28FE6 /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		977916D02708226300B28FE6 /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				97586B772709054000BED658 /* PokemonList */,
+			);
+			path = Pokemon;
+			sourceTree = "<group>";
+		};
+		977916D12708226E00B28FE6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				977916E02708233200B28FE6 /* PokemonListViewModel.swift */,
+				97586B752708D95100BED658 /* PokemonCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		977916D22708228000B28FE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				977916DE2708230000B28FE6 /* PokemonListView.swift */,
+				9770807E2708C33D00351AC1 /* PokemonCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		977916D32708228800B28FE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		977916D4270822BB00B28FE6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				977916D8270822EA00B28FE6 /* ApolloService.swift */,
+				977916E22708235000B28FE6 /* PokemonService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		977916D5270822C600B28FE6 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				97494E2D27082F3700278D20 /* API.swift */,
+				97586B82270915C700BED658 /* NetworkInterceptorProvider.swift */,
+				977916D6270822EA00B28FE6 /* Queries.graphql */,
+				97494E3327089A2400278D20 /* schema.json */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
 		97AECAFE270802F70078A009 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				9776F7372707FF9D00DE194E /* Info.plist */,
 				9776F7322707FF9D00DE194E /* Assets.xcassets */,
+				977080762708B31A00351AC1 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -95,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9776F73A2707FF9D00DE194E /* Build configuration list for PBXNativeTarget "RavnChallenge" */;
 			buildPhases = (
+				97AECB0227080EC80078A009 /* Generate Apollo GraphQL API */,
 				9776F7272707FF9C00DE194E /* Sources */,
 				9776F7282707FF9C00DE194E /* Frameworks */,
 				9776F7292707FF9C00DE194E /* Resources */,
@@ -105,7 +239,9 @@
 			);
 			name = RavnChallenge;
 			packageProductDependencies = (
-				97AECB002708047C0078A009 /* Apollo */,
+				97586B712708CB5A00BED658 /* Kingfisher */,
+				97586B7E270910F900BED658 /* Apollo */,
+				97586B80270910F900BED658 /* ApolloSQLite */,
 			);
 			productName = RavnChallenge;
 			productReference = 9776F72B2707FF9C00DE194E /* RavnChallenge.app */;
@@ -135,7 +271,8 @@
 			);
 			mainGroup = 9776F7222707FF9C00DE194E;
 			packageReferences = (
-				97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				97586B702708CB5900BED658 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				97586B7D270910F900BED658 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 9776F72C2707FF9C00DE194E /* Products */;
 			projectDirPath = "";
@@ -151,9 +288,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97AECAFD270802EB0078A009 /* Modules in Resources */,
-				97AECAFB270802EB0078A009 /* Network in Resources */,
-				97AECAFC270802EB0078A009 /* Utilities in Resources */,
+				977080742708B31A00351AC1 /* Localizable.strings in Resources */,
+				97494E3427089A2400278D20 /* schema.json in Resources */,
+				977916DA270822EA00B28FE6 /* Queries.graphql in Resources */,
 				9776F7362707FF9D00DE194E /* Preview Assets.xcassets in Resources */,
 				9776F7332707FF9D00DE194E /* Assets.xcassets in Resources */,
 			);
@@ -161,17 +298,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		97AECB0227080EC80078A009 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"Network/GraphQL/schema.json\" ./Network/GraphQL/API.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9776F7272707FF9C00DE194E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9776F7312707FF9C00DE194E /* ContentView.swift in Sources */,
+				977916DF2708230000B28FE6 /* PokemonListView.swift in Sources */,
+				9770807D2708C04700351AC1 /* Array+Extensions.swift in Sources */,
 				9776F72F2707FF9C00DE194E /* RavnChallengeApp.swift in Sources */,
+				977916E12708233200B28FE6 /* PokemonListViewModel.swift in Sources */,
+				977916DC270822EA00B28FE6 /* ApolloService.swift in Sources */,
+				977080792708B4FD00351AC1 /* String+Extensions.swift in Sources */,
+				97586B762708D95100BED658 /* PokemonCellViewModel.swift in Sources */,
+				9770807F2708C33D00351AC1 /* PokemonCellView.swift in Sources */,
+				97586B83270915C700BED658 /* NetworkInterceptorProvider.swift in Sources */,
+				97586B742708D82800BED658 /* Int+Extensions.swift in Sources */,
+				97494E2E27082F3700278D20 /* API.swift in Sources */,
+				977916E32708235000B28FE6 /* PokemonService.swift in Sources */,
+				9770806E2708B06A00351AC1 /* SpinnerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		977080762708B31A00351AC1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				977080752708B31A00351AC1 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9776F7382707FF9D00DE194E /* Debug */ = {
@@ -300,7 +480,7 @@
 				DEVELOPMENT_TEAM = 3DHF399XH3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RavnChallenge/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +502,7 @@
 				DEVELOPMENT_TEAM = 3DHF399XH3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RavnChallenge/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +538,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+		97586B702708CB5900BED658 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		97586B7D270910F900BED658 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
 			requirement = {
@@ -369,10 +557,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		97AECB002708047C0078A009 /* Apollo */ = {
+		97586B712708CB5A00BED658 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			package = 97586B702708CB5900BED658 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		97586B7E270910F900BED658 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97586B7D270910F900BED658 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		97586B80270910F900BED658 /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97586B7D270910F900BED658 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
