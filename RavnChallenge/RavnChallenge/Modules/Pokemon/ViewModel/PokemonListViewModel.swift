@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-typealias PokemonGeneration = (name: String, pokemons: [Pokemons])
+typealias PokemonGeneration = (name: String, pokemons: [Pokemon])
 
 class PokemonListViewModel: ObservableObject {
     

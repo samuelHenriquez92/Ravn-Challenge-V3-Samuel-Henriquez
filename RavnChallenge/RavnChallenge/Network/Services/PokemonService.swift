@@ -8,10 +8,11 @@
 import Apollo
 import Combine
 
-typealias Pokemons = FetchPokemonsQuery.Data.AllPokemon
+typealias Pokemon = FetchPokemonsQuery.Data.AllPokemon
+typealias PokemonType = FetchPokemonsQuery.Data.AllPokemon.`Type`?
 
 protocol PokemonServiceType {
-    func fetchPokemons() -> AnyPublisher<[Pokemons], Error>
+    func fetchPokemons() -> AnyPublisher<[Pokemon], Error>
 }
 
 struct PokemonService: PokemonServiceType {
@@ -25,7 +26,7 @@ struct PokemonService: PokemonServiceType {
     }
     
     // MARK: - CountriesServiceType Implementation
-    func fetchPokemons() -> AnyPublisher<[Pokemons], Error> {
+    func fetchPokemons() -> AnyPublisher<[Pokemon], Error> {
         client.executeQuery(query: FetchPokemonsQuery())
             .map { data in
                 let pokemons = data.allPokemon?.compactMap { $0 }
