@@ -12,6 +12,9 @@
 		97586B722708CB5A00BED658 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 97586B712708CB5A00BED658 /* Kingfisher */; };
 		97586B742708D82800BED658 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586B732708D82800BED658 /* Int+Extensions.swift */; };
 		97586B762708D95100BED658 /* PokemonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586B752708D95100BED658 /* PokemonCellViewModel.swift */; };
+		97586B7F270910F900BED658 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 97586B7E270910F900BED658 /* Apollo */; };
+		97586B81270910F900BED658 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 97586B80270910F900BED658 /* ApolloSQLite */; };
+		97586B83270915C700BED658 /* NetworkInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586B82270915C700BED658 /* NetworkInterceptorProvider.swift */; };
 		9770806E2708B06A00351AC1 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9770806D2708B06A00351AC1 /* SpinnerView.swift */; };
 		977080742708B31A00351AC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 977080762708B31A00351AC1 /* Localizable.strings */; };
 		977080792708B4FD00351AC1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977080782708B4FD00351AC1 /* String+Extensions.swift */; };
@@ -25,7 +28,6 @@
 		977916DF2708230000B28FE6 /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977916DE2708230000B28FE6 /* PokemonListView.swift */; };
 		977916E12708233200B28FE6 /* PokemonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977916E02708233200B28FE6 /* PokemonListViewModel.swift */; };
 		977916E32708235000B28FE6 /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977916E22708235000B28FE6 /* PokemonService.swift */; };
-		97AECB012708047C0078A009 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 97AECB002708047C0078A009 /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,7 @@
 		97494E3327089A2400278D20 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		97586B732708D82800BED658 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		97586B752708D95100BED658 /* PokemonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCellViewModel.swift; sourceTree = "<group>"; };
+		97586B82270915C700BED658 /* NetworkInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptorProvider.swift; sourceTree = "<group>"; };
 		9770806D2708B06A00351AC1 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		977080752708B31A00351AC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		977080782708B4FD00351AC1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -56,7 +59,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				97586B722708CB5A00BED658 /* Kingfisher in Frameworks */,
-				97AECB012708047C0078A009 /* Apollo in Frameworks */,
+				97586B7F270910F900BED658 /* Apollo in Frameworks */,
+				97586B81270910F900BED658 /* ApolloSQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				97494E2D27082F3700278D20 /* API.swift */,
+				97586B82270915C700BED658 /* NetworkInterceptorProvider.swift */,
 				977916D6270822EA00B28FE6 /* Queries.graphql */,
 				97494E3327089A2400278D20 /* schema.json */,
 			);
@@ -234,8 +239,9 @@
 			);
 			name = RavnChallenge;
 			packageProductDependencies = (
-				97AECB002708047C0078A009 /* Apollo */,
 				97586B712708CB5A00BED658 /* Kingfisher */,
+				97586B7E270910F900BED658 /* Apollo */,
+				97586B80270910F900BED658 /* ApolloSQLite */,
 			);
 			productName = RavnChallenge;
 			productReference = 9776F72B2707FF9C00DE194E /* RavnChallenge.app */;
@@ -265,8 +271,8 @@
 			);
 			mainGroup = 9776F7222707FF9C00DE194E;
 			packageReferences = (
-				97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				97586B702708CB5900BED658 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				97586B7D270910F900BED658 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 9776F72C2707FF9C00DE194E /* Products */;
 			projectDirPath = "";
@@ -326,6 +332,7 @@
 				977080792708B4FD00351AC1 /* String+Extensions.swift in Sources */,
 				97586B762708D95100BED658 /* PokemonCellViewModel.swift in Sources */,
 				9770807F2708C33D00351AC1 /* PokemonCellView.swift in Sources */,
+				97586B83270915C700BED658 /* NetworkInterceptorProvider.swift in Sources */,
 				97586B742708D82800BED658 /* Int+Extensions.swift in Sources */,
 				97494E2E27082F3700278D20 /* API.swift in Sources */,
 				977916E32708235000B28FE6 /* PokemonService.swift in Sources */,
@@ -539,7 +546,7 @@
 				minimumVersion = 7.0.0;
 			};
 		};
-		97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+		97586B7D270910F900BED658 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
 			requirement = {
@@ -555,10 +562,15 @@
 			package = 97586B702708CB5900BED658 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		97AECB002708047C0078A009 /* Apollo */ = {
+		97586B7E270910F900BED658 /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			package = 97586B7D270910F900BED658 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		97586B80270910F900BED658 /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97586B7D270910F900BED658 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
