@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		97494E2E27082F3700278D20 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97494E2D27082F3700278D20 /* API.swift */; };
 		97494E3427089A2400278D20 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 97494E3327089A2400278D20 /* schema.json */; };
+		97586B722708CB5A00BED658 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 97586B712708CB5A00BED658 /* Kingfisher */; };
+		97586B742708D82800BED658 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586B732708D82800BED658 /* Int+Extensions.swift */; };
+		97586B762708D95100BED658 /* PokemonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586B752708D95100BED658 /* PokemonCellViewModel.swift */; };
 		9770806E2708B06A00351AC1 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9770806D2708B06A00351AC1 /* SpinnerView.swift */; };
 		977080742708B31A00351AC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 977080762708B31A00351AC1 /* Localizable.strings */; };
 		977080792708B4FD00351AC1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977080782708B4FD00351AC1 /* String+Extensions.swift */; };
 		9770807D2708C04700351AC1 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9770807C2708C04700351AC1 /* Array+Extensions.swift */; };
+		9770807F2708C33D00351AC1 /* PokemonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9770807E2708C33D00351AC1 /* PokemonCellView.swift */; };
 		9776F72F2707FF9C00DE194E /* RavnChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9776F72E2707FF9C00DE194E /* RavnChallengeApp.swift */; };
 		9776F7332707FF9D00DE194E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9776F7322707FF9D00DE194E /* Assets.xcassets */; };
 		9776F7362707FF9D00DE194E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9776F7352707FF9D00DE194E /* Preview Assets.xcassets */; };
@@ -27,10 +31,13 @@
 /* Begin PBXFileReference section */
 		97494E2D27082F3700278D20 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		97494E3327089A2400278D20 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		97586B732708D82800BED658 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		97586B752708D95100BED658 /* PokemonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCellViewModel.swift; sourceTree = "<group>"; };
 		9770806D2708B06A00351AC1 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		977080752708B31A00351AC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		977080782708B4FD00351AC1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		9770807C2708C04700351AC1 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		9770807E2708C33D00351AC1 /* PokemonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCellView.swift; sourceTree = "<group>"; };
 		9776F72B2707FF9C00DE194E /* RavnChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RavnChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9776F72E2707FF9C00DE194E /* RavnChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RavnChallengeApp.swift; sourceTree = "<group>"; };
 		9776F7322707FF9D00DE194E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97586B722708CB5A00BED658 /* Kingfisher in Frameworks */,
 				97AECB012708047C0078A009 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,8 +74,9 @@
 		977080772708B4E800351AC1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				977080782708B4FD00351AC1 /* String+Extensions.swift */,
 				9770807C2708C04700351AC1 /* Array+Extensions.swift */,
+				97586B732708D82800BED658 /* Int+Extensions.swift */,
+				977080782708B4FD00351AC1 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				977916E02708233200B28FE6 /* PokemonListViewModel.swift */,
+				97586B752708D95100BED658 /* PokemonCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				977916DE2708230000B28FE6 /* PokemonListView.swift */,
+				9770807E2708C33D00351AC1 /* PokemonCellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +227,7 @@
 			name = RavnChallenge;
 			packageProductDependencies = (
 				97AECB002708047C0078A009 /* Apollo */,
+				97586B712708CB5A00BED658 /* Kingfisher */,
 			);
 			productName = RavnChallenge;
 			productReference = 9776F72B2707FF9C00DE194E /* RavnChallenge.app */;
@@ -246,6 +258,7 @@
 			mainGroup = 9776F7222707FF9C00DE194E;
 			packageReferences = (
 				97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				97586B702708CB5900BED658 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 9776F72C2707FF9C00DE194E /* Products */;
 			projectDirPath = "";
@@ -303,6 +316,9 @@
 				977916E12708233200B28FE6 /* PokemonListViewModel.swift in Sources */,
 				977916DC270822EA00B28FE6 /* ApolloService.swift in Sources */,
 				977080792708B4FD00351AC1 /* String+Extensions.swift in Sources */,
+				97586B762708D95100BED658 /* PokemonCellViewModel.swift in Sources */,
+				9770807F2708C33D00351AC1 /* PokemonCellView.swift in Sources */,
+				97586B742708D82800BED658 /* Int+Extensions.swift in Sources */,
 				97494E2E27082F3700278D20 /* API.swift in Sources */,
 				977916E32708235000B28FE6 /* PokemonService.swift in Sources */,
 				9770806E2708B06A00351AC1 /* SpinnerView.swift in Sources */,
@@ -507,6 +523,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		97586B702708CB5900BED658 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
@@ -518,6 +542,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		97586B712708CB5A00BED658 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97586B702708CB5900BED658 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		97AECB002708047C0078A009 /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 97AECAFF2708047C0078A009 /* XCRemoteSwiftPackageReference "apollo-ios" */;

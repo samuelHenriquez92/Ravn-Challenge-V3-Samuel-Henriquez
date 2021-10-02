@@ -18,28 +18,24 @@ struct PokemonListView: View {
     // MARK: - Variables Declaration
     @StateObject private var viewModel = PokemonListViewModel()
     
-    private var pokemonList: some View {
-        List {
-            ForEach(viewModel.generations, id: \.name) { generation in
-                Section(content: {
-                    ForEach(generation.pokemons, id: \.name) { pokemon in
-                        Text(pokemon.name ?? "")
-                    }
-                }, header: {
-                    Text(generation.name)
-                })
-            }
-        }
-        .listStyle(PlainListStyle())
-    }
-    
     // MARK: - View Lifecycle
     var body: some View {
         ZStack {
             if viewModel.isLoading {
                 SpinnerView()
             } else {
-                pokemonList
+                List {
+                    ForEach(viewModel.generations, id: \.name) { generation in
+                        Section(content: {
+                            ForEach(generation.pokemons, id: \.name) { pokemon in
+                                let cellViewModel = PokemonCellViewModel(pokemon: pokemon)
+                                PokemonCellView(viewModel: cellViewModel)
+                            }
+                        }, header: {
+                            Text(generation.name)
+                        })
+                    }
+                }
             }
         }
         .onAppear {
@@ -53,6 +49,7 @@ struct PokemonListView: View {
                 message: Text(viewModel.errorMessage)
             )
         }
+        .listStyle(PlainListStyle())
         .navigationBarTitle(barTitle)
     }
 }
