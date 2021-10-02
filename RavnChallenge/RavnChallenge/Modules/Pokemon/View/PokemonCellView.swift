@@ -12,6 +12,10 @@ struct PokemonCellView: View {
     
     // MARK: - Defaults
     private let rectangle = "Rectangle"
+    private let rectangleOpacity = 0.5
+    private let pokemonImageSize: CGSize = .init(width: 72, height: 72)
+    private let pokemonImageOffset: CGSize = .init(width: -12, height: 0)
+    private let typeImageSize: CGSize = .init(width: 30, height: 30)
     
     // MARK: - Variables Declaration
     let viewModel: PokemonCellViewModel
@@ -24,12 +28,12 @@ struct PokemonCellView: View {
     // MARK: - View Lifecycle
     var body: some View {
         ZStack {
-            Image(rectangle).opacity(0.5)
+            Image(rectangle).opacity(rectangleOpacity)
             
             HStack {
                 KFImage(viewModel.imageUrl)
-                    .frame(maxWidth: 72, maxHeight: 72)
-                    .offset(.init(width: -12, height: 0))
+                    .frame(width: pokemonImageSize.width, height: pokemonImageSize.height)
+                    .offset(pokemonImageOffset)
                     .shadow(radius: 5)
                 
                 VStack(
@@ -46,13 +50,12 @@ struct PokemonCellView: View {
                 ) {
                     ForEach(
                         viewModel.types,
-                        id: \.?.name
+                        id: \.self
                     ) { type in
-                        Image(type?.name ?? "").frame(width: 30, height: 30)
+                        Image(type).frame(width: typeImageSize.width, height: typeImageSize.height)
                     }
                 }
                 .padding(.trailing, 21)
-                
             }
         }
         .listRowSeparator(.hidden)

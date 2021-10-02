@@ -24,8 +24,9 @@ struct PokemonCellViewModel {
         URL(string: pokemon.sprites?.frontDefault ?? "")
     }
     
-    var types: [PokemonType] {
-        pokemon.types ?? .init()
+    var types: [String] {
+        guard let types = pokemon.types else { return .init() }
+        return types.compactMap { $0?.name }
     }
     
     // MARK: - Initializers
