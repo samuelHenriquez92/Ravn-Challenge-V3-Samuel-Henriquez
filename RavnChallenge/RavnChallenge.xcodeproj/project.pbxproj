@@ -63,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97586B772709054000BED658 /* PokemonList */ = {
+			isa = PBXGroup;
+			children = (
+				977916D32708228800B28FE6 /* Model */,
+				977916D22708228000B28FE6 /* View */,
+				977916D12708226E00B28FE6 /* ViewModel */,
+			);
+			path = PokemonList;
+			sourceTree = "<group>";
+		};
 		9770806C2708B04F00351AC1 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,9 +157,7 @@
 		977916D02708226300B28FE6 /* Pokemon */ = {
 			isa = PBXGroup;
 			children = (
-				977916D32708228800B28FE6 /* Model */,
-				977916D22708228000B28FE6 /* View */,
-				977916D12708226E00B28FE6 /* ViewModel */,
+				97586B772709054000BED658 /* PokemonList */,
 			);
 			path = Pokemon;
 			sourceTree = "<group>";
