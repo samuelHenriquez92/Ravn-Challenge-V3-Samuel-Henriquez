@@ -32,7 +32,7 @@ struct PokemonListView: View {
                                 PokemonCellView(viewModel: cellViewModel)
                             }
                         }, header: {
-                            Text(generation.name)
+                            PokemonListSectionHeaderView(name: generation.name)
                         })
                     }
                 }

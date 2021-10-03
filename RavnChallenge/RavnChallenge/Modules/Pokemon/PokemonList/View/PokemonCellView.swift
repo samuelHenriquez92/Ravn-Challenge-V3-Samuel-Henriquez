@@ -5,14 +5,11 @@
 //  Created by Samuel Henriquez on 2/10/21.
 //
 
-import Kingfisher
 import SwiftUI
 
 struct PokemonCellView: View {
     
     // MARK: - Defaults
-    private let rectangle = "Rectangle"
-    private let rectangleOpacity = 0.5
     private let pokemonImageSize: CGSize = .init(width: 72, height: 72)
     private let pokemonImageOffset: CGSize = .init(width: -12, height: 0)
     private let typeImageSize: CGSize = .init(width: 30, height: 30)
@@ -28,20 +25,28 @@ struct PokemonCellView: View {
     // MARK: - View Lifecycle
     var body: some View {
         ZStack {
-            Image(rectangle).opacity(rectangleOpacity)
+            Color.pokemonCell
+                .cornerRadius(16)
+                .padding(.leading, 12)
             
-            HStack {
-                KFImage(viewModel.imageUrl)
-                    .frame(width: pokemonImageSize.width, height: pokemonImageSize.height)
-                    .offset(pokemonImageOffset)
-                    .shadow(radius: 5)
+            HStack(spacing: 16) {
+                AsyncImage(
+                    url: viewModel.imageUrl
+                ) { pokemonImage in
+                    pokemonImage.scaledToFit()
+                } placeholder: {
+                    SpinnerView()
+                }
+                .frame(maxWidth: pokemonImageSize.width, maxHeight: pokemonImageSize.height)
+                .offset(pokemonImageOffset)
+                .shadow(radius: 5)
                 
                 VStack(
                     alignment: .leading,
                     spacing: 5
                 ) {
-                    Text(viewModel.name).fontWeight(.semibold)
-                    Text(viewModel.id)
+                    Text(viewModel.name).applyTextStyle(with: .bodyEmphasis)
+                    Text(viewModel.id).applyTextStyle(with: .body)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -60,7 +65,7 @@ struct PokemonCellView: View {
         }
         .listRowSeparator(.hidden)
         .padding(.horizontal, 24)
-        .padding(.bottom, 12)
+        .padding(.vertical, 6)
     }
 }
 
