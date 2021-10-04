@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct RavnChallengeApp: App {
+    
+    // MARK: - Variables Declaration
+    @StateObject var networkReachability = NetworkReachability()
+    
+    // MARK: - App Implementation
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                PokemonListView()
+                    .environmentObject(networkReachability)
+            }
         }
     }
 }
