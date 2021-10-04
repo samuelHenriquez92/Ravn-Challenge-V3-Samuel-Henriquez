@@ -14,7 +14,7 @@
 
 // Network NetworkReachability
 "reachability.alert.error.title" = "Problema de Conectividad";
-"reachability.alert.error.message" = "Existe un problema intentando conectar.\nPorfavor revisa tu conexión";
+"reachability.alert.error.message" = "Existe un problema intentando conectar.\nPor favor revisa tu conexión";
 
 // Pokemons List
 "pokemonList.bar.title" = "Listado Pokemon";
