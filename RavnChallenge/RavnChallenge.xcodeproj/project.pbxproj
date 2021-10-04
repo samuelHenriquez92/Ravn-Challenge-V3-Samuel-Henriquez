@@ -31,6 +31,9 @@
 		977916E32708235000B28FE6 /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977916E22708235000B28FE6 /* PokemonService.swift */; };
 		97B2225D27095D1800B808DA /* PokemonListSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2225C27095D1800B808DA /* PokemonListSectionHeaderView.swift */; };
 		97B2225F270962DD00B808DA /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2225E270962DD00B808DA /* View+Extensions.swift */; };
+		97B22268270A93F100B808DA /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B22267270A93F100B808DA /* NetworkReachability.swift */; };
+		97B2226A270A969200B808DA /* NoInternetConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B22269270A969200B808DA /* NoInternetConnectionView.swift */; };
+		97B2226C270AA96400B808DA /* NWPathMonitor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2226B270AA96400B808DA /* NWPathMonitor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		97B2225C27095D1800B808DA /* PokemonListSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListSectionHeaderView.swift; sourceTree = "<group>"; };
 		97B2225E270962DD00B808DA /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		97B22265270A908800B808DA /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		97B22267270A93F100B808DA /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		97B22269270A969200B808DA /* NoInternetConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetConnectionView.swift; sourceTree = "<group>"; };
+		97B2226B270AA96400B808DA /* NWPathMonitor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NWPathMonitor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				9770806D2708B06A00351AC1 /* SpinnerView.swift */,
+				97B22269270A969200B808DA /* NoInternetConnectionView.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -99,6 +106,7 @@
 				97586B732708D82800BED658 /* Int+Extensions.swift */,
 				977080782708B4FD00351AC1 /* String+Extensions.swift */,
 				97B2225E270962DD00B808DA /* View+Extensions.swift */,
+				97B2226B270AA96400B808DA /* NWPathMonitor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 		977916CD2708222800B28FE6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				97B22266270A93B900B808DA /* Connectivity */,
 				977080772708B4E800351AC1 /* Extensions */,
 				9770806C2708B04F00351AC1 /* UI Components */,
 			);
@@ -222,6 +231,14 @@
 				977080762708B31A00351AC1 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		97B22266270A93B900B808DA /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				97B22267270A93F100B808DA /* NetworkReachability.swift */,
+			);
+			path = Connectivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,14 +350,17 @@
 				977916E12708233200B28FE6 /* PokemonListViewModel.swift in Sources */,
 				977916DC270822EA00B28FE6 /* ApolloService.swift in Sources */,
 				977080792708B4FD00351AC1 /* String+Extensions.swift in Sources */,
+				97B2226A270A969200B808DA /* NoInternetConnectionView.swift in Sources */,
 				97B2225F270962DD00B808DA /* View+Extensions.swift in Sources */,
 				97586B762708D95100BED658 /* PokemonCellViewModel.swift in Sources */,
 				9770807F2708C33D00351AC1 /* PokemonCellView.swift in Sources */,
 				97586B83270915C700BED658 /* NetworkInterceptorProvider.swift in Sources */,
+				97B2226C270AA96400B808DA /* NWPathMonitor+Extensions.swift in Sources */,
 				97586B742708D82800BED658 /* Int+Extensions.swift in Sources */,
 				97494E2E27082F3700278D20 /* API.swift in Sources */,
 				97B2225D27095D1800B808DA /* PokemonListSectionHeaderView.swift in Sources */,
 				97586B89270952B300BED658 /* Color+Extensions.swift in Sources */,
+				97B22268270A93F100B808DA /* NetworkReachability.swift in Sources */,
 				977916E32708235000B28FE6 /* PokemonService.swift in Sources */,
 				9770806E2708B06A00351AC1 /* SpinnerView.swift in Sources */,
 			);
@@ -486,7 +506,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RavnChallenge/Preview Content\"";
-				DEVELOPMENT_TEAM = 3DHF399XH3;
+				DEVELOPMENT_TEAM = 957NBRX9U5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RavnChallenge/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
