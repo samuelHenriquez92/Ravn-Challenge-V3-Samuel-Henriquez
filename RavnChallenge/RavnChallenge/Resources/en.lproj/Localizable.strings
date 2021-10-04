@@ -9,6 +9,12 @@
 // Common
 "alert.error.title" = "There was an Error";
 "alert.error.button.accept" = "OK";
+"alert.error.button.cancel" = "Cancel";
+"alert.error.button.retry" = "Try Again";
+
+// Network NetworkReachability
+"reachability.alert.error.title" = "Connectivity Issue";
+"reachability.alert.error.message" = "There is a problem trying to connect.\nPlease check your connectivity";
 
 // Pokemons List
 "pokemonList.bar.title" = "Pokemon List";

@@ -14,15 +14,20 @@ struct PokemonListView: View {
     private let barTitle = "pokemonList.bar.title".localized()
     private let alertTitle = "alert.error.title".localized()
     private let acceptAlertButton = "alert.error.button.accept".localized()
+    private let connectionAsset = "connection"
     
     // MARK: - Variables Declaration
+    @EnvironmentObject var networkReachability: NetworkReachability
     @StateObject private var viewModel = PokemonListViewModel()
+    @State private var connectivityAlert = false
     
     // MARK: - View Lifecycle
     var body: some View {
         ZStack {
             if viewModel.isLoading {
                 SpinnerView()
+            } else if !networkReachability.reachable {
+                Image(connectionAsset)
             } else {
                 List {
                     ForEach(viewModel.generationsSource, id: \.name) { generation in
@@ -41,6 +46,9 @@ struct PokemonListView: View {
         .onAppear {
             viewModel.fetchPokemons()
         }
+        .onReceive(networkReachability.$reachable.dropFirst()) { reachable in
+            connectivityAlert = !reachable
+        }
         .alert(
             isPresented: $viewModel.showAlert
         ) {
@@ -55,6 +63,7 @@ struct PokemonListView: View {
         )
         .listStyle(.plain)
         .navigationBarTitle(barTitle)
+        .checkForConnectivity(showAlert: $connectivityAlert)
     }
 }
 
