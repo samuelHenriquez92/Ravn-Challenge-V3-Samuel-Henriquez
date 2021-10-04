@@ -90,6 +90,10 @@ struct TextStyle: ViewModifier {
 extension View {
     
     // MARK: - Public Methods
+    func checkForConnectivity(showAlert: Binding<Bool>) -> some View {
+        modifier(NoInternetConnectionView(showAlert: showAlert))
+    }
+    
     func applyTextStyle(with style: TextStyleType) -> some View {
         modifier(TextStyle(style: style))
     }
