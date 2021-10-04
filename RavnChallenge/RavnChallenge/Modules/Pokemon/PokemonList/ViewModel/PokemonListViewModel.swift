@@ -21,7 +21,6 @@ class PokemonListViewModel: ObservableObject {
     private let service: PokemonServiceType
     private var cancellables = Set<AnyCancellable>()
     private var generations: [PokemonGeneration] = .init()
-    private var generationsFiltered: [PokemonGeneration] = .init()
     
     var generationsSource: [PokemonGeneration] {
         searchPokemons()
@@ -63,7 +62,8 @@ class PokemonListViewModel: ObservableObject {
     private func searchPokemons() -> [PokemonGeneration] {
         guard !searchText.isEmpty else { return generations }
         
-        generationsFiltered.removeAll()
+        var generationsFiltered = [PokemonGeneration]()
+        
         generations.forEach { generation in
             var pokemons = [Pokemon]()
             
