@@ -11,6 +11,33 @@
         }
       },
       {
+        "package": "Gifu",
+        "repositoryURL": "https://github.com/kaishin/Gifu",
+        "state": {
+          "branch": null,
+          "revision": "51f2eab32903e336f590c013267cfa4d7f8b06c4",
+          "version": "3.3.1"
+        }
+      },
+      {
+        "package": "Nuke",
+        "repositoryURL": "https://github.com/kean/Nuke.git",
+        "state": {
+          "branch": null,
+          "revision": "6be3e778f1663b16dd645b7e8a0a01f73b5ed7f3",
+          "version": "10.6.1"
+        }
+      },
+      {
+        "package": "NukeUI",
+        "repositoryURL": "https://github.com/kean/NukeUI.git",
+        "state": {
+          "branch": null,
+          "revision": "08e953d8d80b409bebcd95ba0635fdd748934ce0",
+          "version": "0.7.0"
+        }
+      },
+      {
         "package": "SQLite.swift",
         "repositoryURL": "https://github.com/stephencelis/SQLite.swift.git",
         "state": {

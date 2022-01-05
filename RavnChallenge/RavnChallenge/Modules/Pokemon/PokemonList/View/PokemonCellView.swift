@@ -5,42 +5,45 @@
 //  Created by Samuel Henriquez on 2/10/21.
 //
 
+import NukeUI
 import SwiftUI
 
 struct PokemonCellView: View {
-    
+
     // MARK: - Defaults
     private let pokemonImageSize: CGSize = .init(width: 72, height: 72)
     private let pokemonImageOffset: CGSize = .init(width: -12, height: 0)
     private let typeImageSize: CGSize = .init(width: 30, height: 30)
-    
+
     // MARK: - Variables Declaration
     let viewModel: PokemonCellViewModel
-    
+
     // MARK: - Initializers
-    init(viewModel: PokemonCellViewModel) {
+    init(
+        viewModel: PokemonCellViewModel
+    ) {
         self.viewModel = viewModel
     }
-    
+
     // MARK: - View Lifecycle
     var body: some View {
         ZStack {
             Color.pokemonCell
                 .cornerRadius(16)
                 .padding(.leading, 12)
-            
+
             HStack(spacing: 16) {
-                AsyncImage(
-                    url: viewModel.imageUrl
-                ) { pokemonImage in
-                    pokemonImage.scaledToFit()
-                } placeholder: {
-                    SpinnerView()
+                LazyImage(source: viewModel.imageUrl) { state in
+                    if let image = state.image {
+                        image  // Displays the loaded image
+                    } else if state.error != nil {
+                        EmptyView()
+                    } else {
+                        SpinnerView()
+                    }
                 }
-                .frame(maxWidth: pokemonImageSize.width, maxHeight: pokemonImageSize.height)
-                .offset(pokemonImageOffset)
-                .shadow(radius: 5)
-                
+                .frame(width: pokemonImageSize.width, height: pokemonImageSize.height, alignment: .center)
+
                 VStack(
                     alignment: .leading,
                     spacing: 5
@@ -49,7 +52,7 @@ struct PokemonCellView: View {
                     Text(viewModel.id).applyTextStyle(with: .body)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                
+
                 HStack(
                     spacing: 10
                 ) {
