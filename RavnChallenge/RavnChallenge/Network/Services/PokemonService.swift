@@ -28,10 +28,7 @@ struct PokemonService: PokemonServiceType {
     // MARK: - CountriesServiceType Implementation
     func fetchPokemons() -> AnyPublisher<[Pokemon], Error> {
         client.executeQuery(query: FetchPokemonsQuery())
-            .map { data in
-                let pokemons = data.allPokemon?.compactMap { $0 }
-                return pokemons ?? .init()
-            }
+            .compactMap { $0.allPokemon?.compactMap { $0 }}
             .eraseToAnyPublisher()
     }
 }
