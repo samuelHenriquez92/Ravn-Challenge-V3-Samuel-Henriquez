@@ -11,26 +11,39 @@ import SwiftUI
 typealias PokemonGeneration = (name: String, pokemons: [Pokemon])
 
 class PokemonListViewModel: ObservableObject {
-    
+
     // MARK: - Variables Declaration
     @Published var isLoading = false
     @Published var showAlert = false
     @Published var errorMessage = ""
     @Published var searchText = ""
-    
+
     private let service: PokemonServiceType
     private var cancellables = Set<AnyCancellable>()
     private var generations: [PokemonGeneration] = .init()
     
     var generationsSource: [PokemonGeneration] {
-        searchPokemons()
+        guard !searchText.isEmpty else { return generations }
+        
+        return generations.reduce([PokemonGeneration](), { result, generation in
+            let pokemons = generation.pokemons.filter { $0.name?.lowercased().contains(searchText.lowercased()) ?? false }
+            guard !pokemons.isEmpty else { return result }
+            
+            var partialResult = result
+            partialResult.append(PokemonGeneration(
+                name: generation.name,
+                pokemons: pokemons
+            ))
+
+            return partialResult
+        })
     }
-    
+
     // MARK: - Initilizers
     init(service: PokemonServiceType = PokemonService()) {
         self.service = service
     }
-    
+
     // MARK: - Public Methods
     func fetchPokemons() {
         isLoading = true
@@ -56,33 +69,5 @@ class PokemonListViewModel: ObservableObject {
                 }
             }
             .store(in: &cancellables)
-    }
-    
-    // MARK: - Private Methods
-    private func searchPokemons() -> [PokemonGeneration] {
-        guard !searchText.isEmpty else { return generations }
-        
-        var generationsFiltered = [PokemonGeneration]()
-        
-        generations.forEach { generation in
-            var pokemons = [Pokemon]()
-            
-            generation.pokemons.forEach { pokemon in
-                if let name = pokemon.name, name.lowercased().contains(searchText.lowercased()) {
-                    pokemons.append(pokemon)
-                }
-            }
-            
-            if !pokemons.isEmpty {
-                generationsFiltered.append(
-                    PokemonGeneration(
-                        name: generation.name,
-                        pokemons: pokemons
-                    )
-                )
-            }
-        }
-        
-        return generationsFiltered
     }
 }
