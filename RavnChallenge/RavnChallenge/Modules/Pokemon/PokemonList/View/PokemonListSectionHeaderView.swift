@@ -22,6 +22,7 @@ struct PokemonListSectionHeaderView: View {
         }
         .frame(maxHeight: 24, alignment: .leading)
         .padding(.vertical, 6)
+        .padding(.horizontal, 24)
     }
 }
 

@@ -9,18 +9,19 @@ import Foundation
 import SwiftUI
 
 struct PokemonListView: View {
-    
+
     // MARK: - Defaults
     private let barTitle = "pokemonList.bar.title".localized()
     private let alertTitle = "alert.error.title".localized()
     private let acceptAlertButton = "alert.error.button.accept".localized()
     private let connectionAsset = "connection"
-    
+
     // MARK: - Variables Declaration
     @EnvironmentObject var networkReachability: NetworkReachability
     @StateObject private var viewModel = PokemonListViewModel()
     @State private var connectivityAlert = false
-    
+    @State private var navigate = false
+
     // MARK: - View Lifecycle
     var body: some View {
         ZStack {
@@ -29,22 +30,30 @@ struct PokemonListView: View {
             } else if !networkReachability.reachable {
                 Image(connectionAsset)
             } else {
-                List {
-                    ForEach(viewModel.generationsSource, id: \.name) { generation in
-                        Section(content: {
-                            ForEach(generation.pokemons, id: \.name) { pokemon in
-                                let cellViewModel = PokemonCellViewModel(pokemon: pokemon)
-                                PokemonCellView(viewModel: cellViewModel)
-                            }
-                        }, header: {
-                            PokemonListSectionHeaderView(name: generation.name)
-                        })
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.generationsSource, id: \.name) { generation in
+                            Section(
+                                content: {
+                                    ForEach(generation.pokemons, id: \.name) { pokemon in
+                                        let cellViewModel = PokemonCellViewModel(pokemon: pokemon)
+
+                                        NavigationLink(isActive: $navigate) {
+                                            PokemonDetailView()
+                                        } label: {
+                                            PokemonCellView(viewModel: cellViewModel)
+                                                .onTapGesture { navigate.toggle() }
+                                        }
+                                    }
+                                },
+                                header: {
+                                    PokemonListSectionHeaderView(name: generation.name)
+                                }
+                            )
+                        }
                     }
                 }
             }
-        }
-        .onAppear {
-            viewModel.fetchPokemons()
         }
         .onReceive(networkReachability.$reachable.dropFirst()) { reachable in
             connectivityAlert = !reachable
@@ -61,7 +70,6 @@ struct PokemonListView: View {
             text: $viewModel.searchText,
             placement: .navigationBarDrawer(displayMode: .always)
         )
-        .listStyle(.plain)
         .navigationBarTitle(barTitle)
         .checkForConnectivity(showAlert: $connectivityAlert)
     }

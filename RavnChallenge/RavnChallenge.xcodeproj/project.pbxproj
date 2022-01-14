@@ -35,6 +35,8 @@
 		97B22268270A93F100B808DA /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B22267270A93F100B808DA /* NetworkReachability.swift */; };
 		97B2226A270A969200B808DA /* NoInternetConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B22269270A969200B808DA /* NoInternetConnectionView.swift */; };
 		97B2226C270AA96400B808DA /* NWPathMonitor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2226B270AA96400B808DA /* NWPathMonitor+Extensions.swift */; };
+		97C1735E2791E0F70032A33E /* RestfulService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1735D2791E0F70032A33E /* RestfulService.swift */; };
+		97C173602791E1320032A33E /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1735F2791E1320032A33E /* PokemonDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		97B22267270A93F100B808DA /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		97B22269270A969200B808DA /* NoInternetConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetConnectionView.swift; sourceTree = "<group>"; };
 		97B2226B270AA96400B808DA /* NWPathMonitor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NWPathMonitor+Extensions.swift"; sourceTree = "<group>"; };
+		97C1735D2791E0F70032A33E /* RestfulService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestfulService.swift; sourceTree = "<group>"; };
+		97C1735F2791E1320032A33E /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 		977916D02708226300B28FE6 /* Pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				97C1735A2791E02C0032A33E /* PokemonDetail */,
 				97586B772709054000BED658 /* PokemonList */,
 			);
 			path = Pokemon;
@@ -209,6 +214,7 @@
 			children = (
 				977916D8270822EA00B28FE6 /* ApolloService.swift */,
 				977916E22708235000B28FE6 /* PokemonService.swift */,
+				97C1735D2791E0F70032A33E /* RestfulService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -241,6 +247,30 @@
 				97B22267270A93F100B808DA /* NetworkReachability.swift */,
 			);
 			path = Connectivity;
+			sourceTree = "<group>";
+		};
+		97C1735A2791E02C0032A33E /* PokemonDetail */ = {
+			isa = PBXGroup;
+			children = (
+				97C1735B2791E04B0032A33E /* View */,
+				97C1735C2791E0540032A33E /* ViewModel */,
+			);
+			path = PokemonDetail;
+			sourceTree = "<group>";
+		};
+		97C1735B2791E04B0032A33E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97C1735F2791E1320032A33E /* PokemonDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97C1735C2791E0540032A33E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +383,8 @@
 				9776F72F2707FF9C00DE194E /* RavnChallengeApp.swift in Sources */,
 				977916E12708233200B28FE6 /* PokemonListViewModel.swift in Sources */,
 				977916DC270822EA00B28FE6 /* ApolloService.swift in Sources */,
+				97C173602791E1320032A33E /* PokemonDetailView.swift in Sources */,
+				97C1735E2791E0F70032A33E /* RestfulService.swift in Sources */,
 				977080792708B4FD00351AC1 /* String+Extensions.swift in Sources */,
 				97B2226A270A969200B808DA /* NoInternetConnectionView.swift in Sources */,
 				97B2225F270962DD00B808DA /* View+Extensions.swift in Sources */,

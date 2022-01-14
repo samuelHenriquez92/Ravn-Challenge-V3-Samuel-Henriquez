@@ -21,37 +21,47 @@ class PokemonListViewModel: ObservableObject {
     private let service: PokemonServiceType
     private var cancellables = Set<AnyCancellable>()
     private var generations: [PokemonGeneration] = .init()
-    
+
     var generationsSource: [PokemonGeneration] {
         guard !searchText.isEmpty else { return generations }
-        
-        return generations.reduce([PokemonGeneration](), { result, generation in
-            let pokemons = generation.pokemons.filter { $0.name?.lowercased().contains(searchText.lowercased()) ?? false }
-            guard !pokemons.isEmpty else { return result }
-            
-            var partialResult = result
-            partialResult.append(PokemonGeneration(
-                name: generation.name,
-                pokemons: pokemons
-            ))
 
-            return partialResult
-        })
+        return generations.reduce(
+            [PokemonGeneration](),
+            { result, generation in
+                let pokemons = generation.pokemons.filter {
+                    $0.name?.lowercased().contains(searchText.lowercased()) ?? false
+                }
+                guard !pokemons.isEmpty else { return result }
+
+                var partialResult = result
+                partialResult.append(
+                    PokemonGeneration(
+                        name: generation.name,
+                        pokemons: pokemons
+                    )
+                )
+
+                return partialResult
+            }
+        )
     }
 
     // MARK: - Initilizers
-    init(service: PokemonServiceType = PokemonService()) {
+    init(
+        service: PokemonServiceType = PokemonService()
+    ) {
         self.service = service
+        fetchPokemons()
     }
 
     // MARK: - Public Methods
     func fetchPokemons() {
         isLoading = true
-        
+
         service.fetchPokemons()
             .sink { [unowned self] completion in
                 isLoading = false
-                
+
                 switch completion {
                 case let .failure(error):
                     showAlert.toggle()
