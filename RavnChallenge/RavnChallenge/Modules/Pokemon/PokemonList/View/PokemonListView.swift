@@ -70,7 +70,7 @@ struct PokemonListView: View {
             text: $viewModel.searchText,
             placement: .navigationBarDrawer(displayMode: .always)
         )
-        .navigationBarTitle(barTitle)
+        .navigationBarTitle(!navigate ? barTitle : "")
         .checkForConnectivity(showAlert: $connectivityAlert)
     }
 }

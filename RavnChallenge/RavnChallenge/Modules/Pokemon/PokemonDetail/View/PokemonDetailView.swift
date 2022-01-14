@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct PokemonDetailView: View {
+    // MARK: - Defaults
+    private let barTitle = "pokemonDetail.bar.title".localized()
+
+    // MARK: - Variables Declaration
     var body: some View {
-        Text("Detail")
+        ScrollView(showsIndicators: false) {
+            
+        }
+        .navigationTitle(barTitle)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

@@ -18,3 +18,6 @@
 
 // Pokemons List
 "pokemonList.bar.title" = "Pokemon List";
+
+// Pokemon Detail
+"pokemonDetail.bar.title" = "Pokemon Info";
