@@ -51,6 +51,7 @@ struct PokemonCellView: View {
                     Text(viewModel.name).applyTextStyle(with: .bodyEmphasis)
                     Text(viewModel.id).applyTextStyle(with: .body)
                 }
+                .foregroundColor(.sectionHeader)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
                 HStack(
