@@ -22,7 +22,7 @@ struct PokemonService: PokemonServiceType {
 
     // MARK: - Initilizers
     init(
-        client: ApolloServiceType = ApolloService.shared
+        client: ApolloServiceType = ApolloService(apollo: .retrierClient)
     ) {
         self.client = client
     }
