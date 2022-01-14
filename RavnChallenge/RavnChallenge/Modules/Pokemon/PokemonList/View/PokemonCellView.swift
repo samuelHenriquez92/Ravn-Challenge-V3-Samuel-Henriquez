@@ -9,7 +9,6 @@ import NukeUI
 import SwiftUI
 
 struct PokemonCellView: View {
-
     // MARK: - Defaults
     private let pokemonImageSize: CGSize = .init(width: 72, height: 72)
     private let pokemonImageOffset: CGSize = .init(width: -12, height: 0)

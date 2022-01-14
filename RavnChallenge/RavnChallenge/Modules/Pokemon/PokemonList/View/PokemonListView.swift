@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 struct PokemonListView: View {
-
     // MARK: - Defaults
     private let barTitle = "pokemonList.bar.title".localized()
     private let alertTitle = "alert.error.title".localized()
