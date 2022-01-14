@@ -33,6 +33,7 @@
 		97A333F62791F4F400526C23 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 97A333F52791F4F400526C23 /* Moya */; };
 		97A333F82791F92700526C23 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A333F72791F92700526C23 /* Constants.swift */; };
 		97A333FB2791FACB00526C23 /* ApolloService+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A333FA2791FACB00526C23 /* ApolloService+Extension.swift */; };
+		97A333FE2792327B00526C23 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 97A333FD2792327B00526C23 /* CombineExt */; };
 		97B2225D27095D1800B808DA /* PokemonListSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2225C27095D1800B808DA /* PokemonListSectionHeaderView.swift */; };
 		97B2225F270962DD00B808DA /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2225E270962DD00B808DA /* View+Extensions.swift */; };
 		97B22268270A93F100B808DA /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B22267270A93F100B808DA /* NetworkReachability.swift */; };
@@ -85,6 +86,7 @@
 				9775D2FC278648B7005DE453 /* NukeUI in Frameworks */,
 				97586B7F270910F900BED658 /* Apollo in Frameworks */,
 				97A333F62791F4F400526C23 /* Moya in Frameworks */,
+				97A333FE2792327B00526C23 /* CombineExt in Frameworks */,
 				97586B81270910F900BED658 /* ApolloSQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +313,7 @@
 				97586B80270910F900BED658 /* ApolloSQLite */,
 				9775D2FB278648B7005DE453 /* NukeUI */,
 				97A333F52791F4F400526C23 /* Moya */,
+				97A333FD2792327B00526C23 /* CombineExt */,
 			);
 			productName = RavnChallenge;
 			productReference = 9776F72B2707FF9C00DE194E /* RavnChallenge.app */;
@@ -344,6 +347,7 @@
 				97586B7D270910F900BED658 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				9775D2FA278648B7005DE453 /* XCRemoteSwiftPackageReference "NukeUI" */,
 				97A333F42791F4F400526C23 /* XCRemoteSwiftPackageReference "Moya" */,
+				97A333FC2792327B00526C23 /* XCRemoteSwiftPackageReference "CombineExt" */,
 			);
 			productRefGroup = 9776F72C2707FF9C00DE194E /* Products */;
 			projectDirPath = "";
@@ -647,6 +651,14 @@
 				minimumVersion = 13.0.0;
 			};
 		};
+		97A333FC2792327B00526C23 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineExt.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -669,6 +681,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 97A333F42791F4F400526C23 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		97A333FD2792327B00526C23 /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A333FC2792327B00526C23 /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
