@@ -20,6 +20,7 @@ struct PokemonListView: View {
     @StateObject private var viewModel = PokemonListViewModel()
     @State private var connectivityAlert = false
     @State private var navigate = false
+    @State private var pokemonIdSelected = ""
 
     // MARK: - View Lifecycle
     var body: some View {
@@ -36,12 +37,11 @@ struct PokemonListView: View {
                                 content: {
                                     ForEach(generation.pokemons, id: \.name) { pokemon in
                                         let cellViewModel = PokemonCellViewModel(pokemon: pokemon)
-
-                                        NavigationLink(isActive: $navigate) {
-                                            PokemonDetailView()
-                                        } label: {
-                                            PokemonCellView(viewModel: cellViewModel)
-                                                .onTapGesture { navigate.toggle() }
+                                        PokemonCellView(viewModel: cellViewModel) {
+                                            if let id = pokemon.id {
+                                                pokemonIdSelected = "\(id)"
+                                                navigate.toggle()
+                                            }
                                         }
                                     }
                                 },
@@ -50,6 +50,11 @@ struct PokemonListView: View {
                                 }
                             )
                         }
+                    }
+                    NavigationLink(isActive: $navigate) {
+                        PokemonDetailView(viewModel: .init(pokemonName: pokemonIdSelected))
+                    } label: {
+                        EmptyView()
                     }
                 }
             }

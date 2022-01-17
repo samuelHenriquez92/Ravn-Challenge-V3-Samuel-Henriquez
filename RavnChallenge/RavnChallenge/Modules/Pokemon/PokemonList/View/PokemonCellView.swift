@@ -16,12 +16,15 @@ struct PokemonCellView: View {
 
     // MARK: - Variables Declaration
     let viewModel: PokemonCellViewModel
+    let onTap: TriggerAction
 
     // MARK: - Initializers
     init(
-        viewModel: PokemonCellViewModel
+        viewModel: PokemonCellViewModel,
+        onTap: @escaping TriggerAction
     ) {
         self.viewModel = viewModel
+        self.onTap = onTap
     }
 
     // MARK: - View Lifecycle
@@ -69,6 +72,9 @@ struct PokemonCellView: View {
         .listRowSeparator(.hidden)
         .padding(.horizontal, 24)
         .padding(.vertical, 6)
+        .onTapGesture {
+            onTap()
+        }
     }
 }
 
@@ -85,7 +91,8 @@ struct PokemonCellView_Previews: PreviewProvider {
                         frontDefault: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
                     )
                 )
-            )
+            ),
+            onTap: {}
         ).previewLayout(.sizeThatFits)
     }
 }

@@ -12,9 +12,12 @@ struct PokemonDetailView: View {
     private let barTitle = "pokemonDetail.bar.title".localized()
 
     // MARK: - Variables Declaration
+    @StateObject var viewModel: PokemonDetailViewModel
+
+    // MARK: - View Lifecycle
     var body: some View {
         ScrollView(showsIndicators: false) {
-            
+            Text(viewModel.name)
         }
         .navigationTitle(barTitle)
         .navigationBarTitleDisplayMode(.inline)
@@ -23,6 +26,6 @@ struct PokemonDetailView: View {
 
 struct PokemonDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonDetailView()
+        PokemonDetailView(viewModel: .init(pokemonName: "bulbasaur"))
     }
 }
