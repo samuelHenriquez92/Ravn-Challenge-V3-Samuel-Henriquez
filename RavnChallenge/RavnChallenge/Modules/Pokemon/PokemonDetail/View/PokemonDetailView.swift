@@ -5,6 +5,7 @@
 //  Created by Samuel Henriquez on 1/14/22.
 //
 
+import NukeUI
 import SwiftUI
 
 struct PokemonDetailView: View {
@@ -17,7 +18,13 @@ struct PokemonDetailView: View {
     // MARK: - View Lifecycle
     var body: some View {
         ScrollView(showsIndicators: false) {
-            Text(viewModel.name)
+            ZStack {
+                LazyVStack {
+                    
+                }
+                .frame(height: 256)
+                .background(viewModel.detail?.color.getColor)
+            }
         }
         .navigationTitle(barTitle)
         .navigationBarTitleDisplayMode(.inline)

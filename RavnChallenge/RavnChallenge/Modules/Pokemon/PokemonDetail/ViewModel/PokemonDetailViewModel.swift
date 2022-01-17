@@ -20,7 +20,7 @@ final class PokemonDetailViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var showErrorAlert: Bool = false
     @Published var errorMessage: String = ""
-    @Published var name: String = ""
+    @Published var detail: PokemonDetail?
 
     // MARK: - Initializers
     init(
@@ -64,8 +64,8 @@ final class PokemonDetailViewModel: ObservableObject {
             .share()
 
         fetchPokemonDetailSuccess
-            .compactMap { $0.name }
-            .assign(to: &$name)
+            .compactMap { $0 }
+            .assign(to: &$detail)
 
         /// Failure
         let fetchPokemonDetailFailure =

@@ -7,11 +7,11 @@
 
 import Foundation
 
-// MARK: - PokemonDetail
 struct PokemonDetail: Codable {
     let name: String
+    let color: PokemonColor
 
     enum CodingKeys: String, CodingKey {
-        case name
+        case name, color
     }
 }
