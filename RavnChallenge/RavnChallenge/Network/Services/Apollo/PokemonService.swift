@@ -16,18 +16,17 @@ protocol PokemonServiceType {
 }
 
 struct PokemonService: PokemonServiceType {
-
     // MARK: - Variables Declaration
     private let client: ApolloServiceType
 
     // MARK: - Initilizers
     init(
-        client: ApolloServiceType = ApolloService.shared
+        client: ApolloServiceType = ApolloService(apollo: .retrierClient)
     ) {
         self.client = client
     }
 
-    // MARK: - CountriesServiceType Implementation
+    // MARK: - PokemonServiceType Implementation
     func fetchPokemons() -> AnyPublisher<[Pokemon], Error> {
         client.executeQuery(query: FetchPokemonsQuery())
             .compactMap { $0.allPokemon?.compactMap { $0 } }

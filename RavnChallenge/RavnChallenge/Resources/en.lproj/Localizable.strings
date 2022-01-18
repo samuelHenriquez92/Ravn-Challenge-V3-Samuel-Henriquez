@@ -21,3 +21,5 @@
 
 // Pokemon Detail
 "pokemonDetail.bar.title" = "Pokemon Info";
+"pokemonDetail.defaultSprite.text" = "Default Sprite";
+"pokemonDetail.shinySprite.text" = "Shiny Sprite";
