@@ -11,6 +11,16 @@ import SwiftUI
 struct PokemonDetailView: View {
     // MARK: - Defaults
     private let barTitle = "pokemonDetail.bar.title".localized()
+    private let defaultText = "pokemonDetail.defaultSprite.text".localized()
+    private let shinyText = "pokemonDetail.shinySprite.text".localized()
+
+    enum Sizes {
+        static let pokemonImageContainer = 256.0
+        static let pokemonImageSize = 158.4
+        static let pokemonImagePaddingTop = 24.8
+        static let pokemonImagePaddingBottom = 10.8
+        static let pokemonSpriteSelectorHorizontalPadding = 18.0
+    }
 
     // MARK: - Variables Declaration
     @StateObject var viewModel: PokemonDetailViewModel
@@ -19,15 +29,38 @@ struct PokemonDetailView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             ZStack {
-                LazyVStack {
-                    
-                }
-                .frame(height: 256)
-                .background(viewModel.detail?.color.getColor)
+                pokemonImageContainer()
             }
         }
         .navigationTitle(barTitle)
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    // MARK: - Private Methods
+    fileprivate func pokemonImageContainer() -> some View {
+        return LazyVStack {
+            LazyImage(source: viewModel.sprite) { state in
+                if let image = state.image {
+                    image  // Displays the loaded image
+                } else if state.error != nil {
+                    EmptyView()
+                } else {
+                    SpinnerView()
+                }
+            }
+            .padding(.top, Sizes.pokemonImagePaddingTop)
+            .padding(.bottom, Sizes.pokemonImagePaddingBottom)
+            .frame(width: Sizes.pokemonImageSize, height: Sizes.pokemonImageSize, alignment: .center)
+
+            Picker("", selection: $viewModel.changePokemonSpriteInput) {
+                Text(defaultText).tag(0)
+                Text(shinyText).tag(1)
+            }
+            .pickerStyle(.segmented)
+            .padding(.horizontal, Sizes.pokemonSpriteSelectorHorizontalPadding)
+        }
+        .frame(height: Sizes.pokemonImageContainer)
+        .background(viewModel.detail?.color.getColor)
     }
 }
 

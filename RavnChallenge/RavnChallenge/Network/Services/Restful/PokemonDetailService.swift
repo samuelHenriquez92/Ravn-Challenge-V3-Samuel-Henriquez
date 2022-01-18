@@ -10,7 +10,8 @@ import Foundation
 import Moya
 
 protocol PokemonDetailServiceType {
-    func fecthPokemonDetail(with name: String) -> AnyPublisher<PokemonDetail, Error>
+    func fecthPokemonDetail(with id: String) -> AnyPublisher<PokemonDetail, Error>
+    func fetchSprites(with id: String) -> AnyPublisher<PokemonSprite, Error>
 }
 
 final class PokemonDetailService: PokemonDetailServiceType {
@@ -27,8 +28,13 @@ final class PokemonDetailService: PokemonDetailServiceType {
     }
 
     // MARK: - PokemonDetailServiceType Implementation
-    func fecthPokemonDetail(with name: String) -> AnyPublisher<PokemonDetail, Error> {
-        provider.execute(target: MultiTarget(PokemonDetailTarget.detail(name: name)))
+    func fecthPokemonDetail(with id: String) -> AnyPublisher<PokemonDetail, Error> {
+        provider.execute(target: MultiTarget(PokemonDetailTarget.detail(id: id)))
+            .eraseToAnyPublisher()
+    }
+
+    func fetchSprites(with id: String) -> AnyPublisher<PokemonSprite, Error> {
+        provider.execute(target: MultiTarget(PokemonDetailTarget.sprites(id: id)))
             .eraseToAnyPublisher()
     }
 }

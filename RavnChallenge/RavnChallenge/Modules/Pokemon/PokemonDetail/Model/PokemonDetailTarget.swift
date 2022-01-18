@@ -8,27 +8,30 @@
 import Moya
 
 enum PokemonDetailTarget {
-    case detail(name: String)
+    case detail(id: String)
+    case sprites(id: String)
 }
 
 extension PokemonDetailTarget: TargetType {
     var path: String {
         switch self {
-        case .detail(let name):
-            return "/pokemon-species/\(name)"
+        case .detail(let id):
+            return "/pokemon-species/\(id)"
+        case .sprites(let id):
+            return "/pokemon/\(id)"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .detail:
+        case .detail, .sprites:
             return .get
         }
     }
 
     var task: Task {
         switch self {
-        case .detail:
+        case .detail, .sprites:
             return .requestPlain
         }
     }
