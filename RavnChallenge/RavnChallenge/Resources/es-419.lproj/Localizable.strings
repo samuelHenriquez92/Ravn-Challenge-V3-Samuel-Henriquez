@@ -21,3 +21,5 @@
 
 // Pokemon Detail
 "pokemonDetail.bar.title" = "Información Pokemon";
+"pokemonDetail.defaultSprite.text" = "Imagen Normal";
+"pokemonDetail.shinySprite.text" = "Imagen Brillante";
